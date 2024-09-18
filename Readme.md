@@ -5,18 +5,18 @@
 
 Um caso particularmente importante do problema da seleção consiste em encontrar a mediana de uma sequência. Considere as seguinte soluções para esse problema:
  
- Selecao1(A,i)
-    1 Ordene(A)
+ Selecao1(A,i)\
+    1 Ordene(A)\
     2 return a<sub>i</sub>
 
- Selecao2(A,i)
-    1 q ← Particao(A)
-    2 if n = 1
-    3   then return a<sub>1</sub>
-    4 if i < q
-    5   then return Selecao2(A[1 : q − 1],i)
-    6 else if i > q
-    7 then return Selecao2(A[q + 1 : n],i −(q + 1))
+ Selecao2(A,i)\
+    1 q ← Particao(A)\
+    2 if n = 1\
+    3   then return a<sub>1</sub>\
+    4 if i < q\
+    5   then return Selecao2(A[1 : q − 1],i)\
+    6 else if i > q\
+    7 then return Selecao2(A[q + 1 : n],i −(q + 1))\
     8 else return a<sub>q</sub>
 
 Implemente os dois algoritmos. No primeiro caso, será necessário primeiro implementar um algoritmo de ordenação. Você pode escolher qual implementar desde que seja um dos algoritmos Θ(n.lg(n)) no caso médio.
